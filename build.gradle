@@ -2,6 +2,12 @@ plugins {
     id 'java'
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -13,9 +19,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    // https://mvnrepository.com/artifact/org.jsoup/jsoup
     implementation 'org.jsoup:jsoup:1.14.3'
-
     implementation 'org.w3c:dom:2.3.0-jaxb-1.0.6'
 }
 test {
