@@ -1,4 +1,4 @@
-def slackResponse = slackSend(channel: "#pipeline-Ynet", attachments: attachments)
+
 
 pipeline {
     
